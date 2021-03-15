@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_neighbour"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.neighbour_list.DetailNeighbourActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_neighbour_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/activity_neighbour_details_toolbar_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop" />
+
+
+            <ImageButton
+                android:id="@+id/activity_neighbour_details_toolbar_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_arrow_back_24dp"/>
+
+            <TextView
+                android:id="@+id/activity_neighbour_details_toolbar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:textSize="40sp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_neighbour_details_fav_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/activity_neighbour_details_infos_card"
+        app:layout_constraintEnd_toEndOf="@+id/activity_neighbour_details_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/activity_neighbour_details_toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_neighbour_details_infos_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        app:layout_constraintTop_toBottomOf="@id/activity_neighbour_details_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/infos_card_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="8dp"
+                android:textSize="30sp"/>
+
+            <ImageView
+                android:id="@+id/infos_card_address_img"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_title_txt"
+                android:padding="8dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/ic_address_24dp" />
+
+            <TextView
+                android:id="@+id/infos_card_address_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_title_txt"
+                android:padding="8dp"
+                android:layout_toEndOf="@id/infos_card_address_img"
+                android:text="Nice" />
+
+            <ImageView
+                android:id="@+id/infos_card_phone_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_address_txt"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_phone_24dp" />
+            />
+
+            <TextView
+                android:id="@+id/infos_card_phone_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_address_txt"
+                android:layout_toEndOf="@id/infos_card_phone_img"
+                android:padding="8dp"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/infos_card_website_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_phone_txt"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_website_24dp" />
+            />
+
+            <TextView
+                android:id="@+id/infos_card_website_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_phone_txt"
+                android:layout_toEndOf="@id/infos_card_website_img"
+                android:padding="8dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_neighbour_details_desc_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        app:layout_constraintTop_toBottomOf="@id/activity_neighbour_details_infos_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/desc_card_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/des_card_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"></TextView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
